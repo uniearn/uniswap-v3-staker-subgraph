@@ -1,0 +1,32 @@
+
+type Position @entity {
+  id: ID!
+  incentiveId: Bytes!
+  liquidity: BigInt!
+  tokenId: BigInt!
+  owner: Bytes!
+  amount0: BigInt!
+  amount1: BigInt!
+  tickLower: Int
+  tickUpper: Int
+  poolAddress: String
+  sqrtPriceX96: BigInt
+  sqrtRatioAX96: BigInt
+  sqrtRatioBX96: BigInt
+  tx:String!
+}
+
+type Incentive @entity {
+  id: ID!
+  count: Int!
+  amount0: BigInt!
+  amount1: BigInt!
+  status: Int!
+  rewardToken: String!
+  pool: String!
+  startTime: BigInt!
+  endTime: BigInt!
+  refundee: String!
+  reward:BigInt!
+  tx:String!
+}
